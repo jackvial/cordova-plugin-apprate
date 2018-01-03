@@ -291,7 +291,7 @@ AppRate = (function() {
   AppRate.setCounter = function(count) {
     if(localStorageParam(LOCAL_STORAGE_COUNTER)){
       counter = JSON.parse(localStorageParam(LOCAL_STORAGE_COUNTER)) || counter;
-      counter.countdown = 0;
+      counter.countdown = count;
       localStorageParam(LOCAL_STORAGE_COUNTER, JSON.stringify(counter));
     }
   };
