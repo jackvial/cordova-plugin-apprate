@@ -49,7 +49,7 @@
         [self launchInAppReview];
     }
     
-    if(!shouldUseNativePrompt && allowAppStoreRedirectiOS)
+    if(!shouldUseNativePrompt && allowAppStoreRedirectiOS) {
         NSString *appId = @"";
 
         if ([command.arguments count] >= 1) {
