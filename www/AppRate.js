@@ -286,6 +286,15 @@ AppRate = (function() {
     updateCounter();
     return this;
   };
+  
+  // Set the counter
+  AppRate.setCounter = function(count) {
+    if(localStorageParam(LOCAL_STORAGE_COUNTER)){
+      counter = JSON.parse(localStorageParam(LOCAL_STORAGE_COUNTER)) || counter;
+      counter.countdown = 0;
+      localStorageParam(LOCAL_STORAGE_COUNTER, JSON.stringify(counter));
+    }
+  };
 
   AppRate.navigateToAppStore = function() {
     var iOSVersion;
