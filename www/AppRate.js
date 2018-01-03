@@ -56,7 +56,7 @@ AppRate = (function () {
         break;
       case 1:
         currentBtn = localeObj.noButtonLabel;
-        if (showAskForFeedbackPrompt) {
+        if (AppRate.preferences.showAskForFeedbackPrompt) {
           if (typeof base.handleNegativeFeedback === "function") {
             navigator.notification.confirm(localeObj.feedbackPromptMessage, promptForFeedbackWindowButtonClickHandler, localeObj.feedbackPromptTitle, [localeObj.noButtonLabel, localeObj.yesButtonLabel]);
           }
