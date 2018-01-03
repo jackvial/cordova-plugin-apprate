@@ -50,6 +50,7 @@
     }
     
     if(!shouldUseNativePrompt && allowAppStoreRedirectiOS) {
+        
         NSString *appId = @"";
 
         if ([command.arguments count] >= 1) {

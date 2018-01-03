@@ -111,6 +111,9 @@ AppRate = (function() {
   };
 
   updateCounter = function(action) {
+    if(AppRate.preferences.debugMode) {
+      console.log('update Counter: ', action); 
+    }
     if (action == null) {
       action = 'increment';
     }
@@ -162,6 +165,11 @@ AppRate = (function() {
   };
 
   localStorageParam = function(itemName, itemValue, action) {
+    if(AppRate.preferences.debugMode) {
+      console.log('localStorageParam itemName: ', itemName);
+      console.log('localStorageParam itemValue: ', itemValue);
+      console.log('localStorageParam action: ', action); 
+    }
     if (itemValue == null) {
       itemValue = null;
     }
@@ -257,7 +265,8 @@ AppRate = (function() {
       windows8: null,
       windows: null
     },
-    customLocale: null
+    customLocale: null,
+    debugMode: true
   };
 
   AppRate.promptForRating = function(immediately) {
