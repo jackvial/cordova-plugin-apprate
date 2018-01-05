@@ -67,7 +67,7 @@ AppRate = (function () {
         break;
       case 2:
         currentBtn = localeObj.yesButtonLabel;
-        navigator.notification.confirm(localeObj.message, promptForStoreRatingWindowButtonClickHandler, localeObj.title, [localeObj.cancelButtonLabel, localeObj.laterButtonLabel, localeObj.rateButtonLabel])
+        navigator.notification.confirm(localeObj.message, promptForStoreRatingWindowButtonClickHandler, localeObj.title, [localeObj.cancelButtonLabel, localeObj.rateButtonLabel])
         break;
     }
     return typeof base.onButtonClicked === "function" ? base.onButtonClicked(buttonIndex, currentBtn, "AppRatingPrompt") : function () { };
@@ -84,10 +84,6 @@ AppRate = (function () {
         updateCounter('stop');
         break;
       case 2:
-        currentBtn = localeObj.laterButtonLabel;
-        updateCounter('reset');
-        break;
-      case 3:
         currentBtn = localeObj.rateButtonLabel;
         updateCounter('stop');
         AppRate.navigateToAppStore();
