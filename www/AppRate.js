@@ -81,11 +81,11 @@ AppRate = (function () {
         break;
       case 1:
         currentBtn = localeObj.cancelButtonLabel;
-        updateCounter('stop');
+        //updateCounter('stop');
         break;
       case 2:
         currentBtn = localeObj.rateButtonLabel;
-        updateCounter('stop');
+        //updateCounter('stop');
         AppRate.navigateToAppStore();
         break;
     }
@@ -100,11 +100,11 @@ AppRate = (function () {
     switch (buttonIndex) {
       case 1:
         currentBtn = localeObj.noButtonLabel;
-        updateCounter('stop');
+        //updateCounter('stop');
         break;
       case 2:
         currentBtn = localeObj.yesButtonLabel;
-        updateCounter('stop');
+        //updateCounter('stop');
         base.handleNegativeFeedback();
         break;
     }
@@ -127,8 +127,6 @@ AppRate = (function () {
       case 'reset':
         counter.countdown = 0;
         break;
-      case 'stop':
-        counter.countdown = AppRate.preferences.usesUntilPrompt + 1;
     }
     localStorageParam(LOCAL_STORAGE_COUNTER, JSON.stringify(counter));
     return counter;
